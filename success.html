@@ -103,8 +103,17 @@
 
         </div>
 
+        <script>
+            var amount=12.89;
+            var orderId=3325;
 
-        <img src="https://www.shareasale.com/sale.cfm?tracking=123&amount=99.99&merchantID=135259&transtype=sale" width="1" height="1">
+
+            var pixel = document.createElement("img");
+            pixel.src = "https://www.shareasale.com/sale.cfm?tracking=" + orderId + "&amount=" + amount + "&merchantID=135259&transtype=sale";
+            document.body.append(pixel);
+
+        </script>
+
         <script src="https://www.dwin1.com/41234.js" type="text/javascript" defer="defer"></script>
 
 </body>
