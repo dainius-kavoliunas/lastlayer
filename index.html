@@ -229,7 +229,7 @@
 
 
                 var pixel = document.createElement("img");
-                pixel.src = "https://www.shareasale.com/sale.cfm?tracking=" + data.id + "&amount=" + amountToPay + "&merchantID=135259&transtype=sale";
+                pixel.src = "https://www.shareasale.com/sale.cfm?tracking=" + orderData.id + "&amount=" + amountToPay + "&merchantID=135259&transtype=sale";
                 document.body.append(pixel);
 
                 const Http = new XMLHttpRequest();
