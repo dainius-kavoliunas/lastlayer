@@ -158,19 +158,17 @@
     
     <!-- 
         <script src="https://www.paypal.com/sdk/js?client-id=AWqb1NYm3vE14JFAmZM4drCgAYog5tgIaNGhsTcsrk3bAQd_zB-7CYSoyVaUFh-1pGRMtLtxms4YeJ_u&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
-     
-    
     --> 
 
     <script>
 
-        var amountToPay=62.28;
+        var amountToPay=71.64;
 
         var productName="Lastlayer";
-        var planLine="1-year plan ($5.19/mo)";
-        var discountLine="";
-        var totalAmount="62.28";
-        var amountBeforeDiscount="";
+        var planLine="3-year plan ($1.99/mo)";
+        var discountLine="Save 62%";
+        var totalAmount="$71.64";
+        var amountBeforeDiscount="$186.84";
 
 
 
@@ -209,34 +207,24 @@
 
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(orderData) {
-                
-                //console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-
-
-
-                var data = {
-                    email : document.getElementById("emailBox").value ,
-                    data : orderData
-                };
-
-                var url = "https://script.google.com/macros/s/AKfycbz5H7uZxPztIz215YuNRUSOI2F0F7wyzFExVkjhO5fPtu4RzjODiUyNl7urfGk1PUhX/exec?data=" + JSON.stringify(data, null, 2);
-
 
                 document.getElementById('successContent').style.display = "block";
                 document.getElementById('checkoutContent').style.display = "none";
-
 
                 var pixel = document.createElement("img");
                 pixel.src = "https://www.shareasale.com/sale.cfm?tracking=" + orderData.id + "&amount=" + amountToPay + "&merchantID=135259&transtype=sale";
                 document.body.append(pixel);
 
+                var data = {
+                    email : document.getElementById("emailBox").value ,
+                    data : orderData
+                };
+                var url = "https://script.google.com/macros/s/AKfycbz5H7uZxPztIz215YuNRUSOI2F0F7wyzFExVkjhO5fPtu4RzjODiUyNl7urfGk1PUhX/exec?data=" + JSON.stringify(data, null, 2);
                 const Http = new XMLHttpRequest();
                 Http.open("GET", url);
                 Http.send();
-
                 Http.onreadystatechange = function() {
                     if(this.readyState==4){    
-                        //window.location.replace("/success");
                     }
                 }
 
