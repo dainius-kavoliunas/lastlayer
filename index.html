@@ -224,8 +224,13 @@
                 var url = "https://script.google.com/macros/s/AKfycbz5H7uZxPztIz215YuNRUSOI2F0F7wyzFExVkjhO5fPtu4RzjODiUyNl7urfGk1PUhX/exec?data=" + JSON.stringify(data, null, 2);
 
 
-                // document.getElementById('successContent').style.display = "block";
-                // document.getElementById('checkoutContent').style.display = "none";
+                document.getElementById('successContent').style.display = "block";
+                document.getElementById('checkoutContent').style.display = "none";
+
+
+                var pixel = document.createElement("img");
+                pixel.src = "https://www.shareasale.com/sale.cfm?tracking=" + data.id + "&amount=" + amountToPay + "&merchantID=135259&transtype=sale";
+                document.body.append(pixel);
 
                 const Http = new XMLHttpRequest();
                 Http.open("GET", url);
@@ -233,7 +238,7 @@
 
                 Http.onreadystatechange = function() {
                     if(this.readyState==4){    
-                        window.location.replace("/success");
+                        //window.location.replace("/success");
                     }
                 }
 
