@@ -162,13 +162,40 @@
 
     <script>
 
-        var amountToPay=71.64;
 
+        function getParameterByName(name, url = window.location.href) {
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        var period = getParameterByName("period");
+
+        var amountToPay=71.64;
         var productName="Lastlayer";
         var planLine="3-year plan ($1.99/mo)";
         var discountLine="Save 62%";
         var totalAmount="$71.64";
         var amountBeforeDiscount="$186.84";
+
+        if(period == "2-year"){
+            var amountToPay=107.76;
+            var productName="Lastlayer";
+            var planLine="2-year plan ($4.49/mo)";
+            var discountLine="Save 13%";
+            var totalAmount="$107.76";
+            var amountBeforeDiscount="$124.56";
+        }else if(period == "1-year"){
+            var amountToPay=62.28;
+            var productName="Lastlayer";
+            var planLine="1-year plan ($5.19/mo)";
+            var discountLine="";
+            var totalAmount="$62.28";
+            var amountBeforeDiscount="";
+        }
 
 
 
@@ -188,6 +215,7 @@
 
 
     <script>
+
         function initPayPalButton() {
             paypal.Buttons({
             style: {
