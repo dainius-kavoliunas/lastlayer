@@ -1,0 +1,250 @@
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+
+
+
+<script src="https://www.paypal.com/sdk/js?client-id=AU45bfv6WZBE3YIhEBo1wyAKNuqo025uXQwA9UAOGJ54oYoRFiZhWPvzS3-ONp1Wk43pkm5G1e-a09yB" data-sdk-integration-source="button-factory"></script>
+ 
+    
+<!-- 
+    <script src="https://www.paypal.com/sdk/js?client-id=AWqb1NYm3vE14JFAmZM4drCgAYog5tgIaNGhsTcsrk3bAQd_zB-7CYSoyVaUFh-1pGRMtLtxms4YeJ_u&enable-funding=venmo&currency=USD" data-sdk-integration-source="button-factory"></script>
+ 
+
+--> 
+
+
+
+<style>
+
+@import url('https://fonts.google.com/share?selection.family=Montserrat:wght@300;400;600');
+
+body{
+   background-color: #F6F6F6;
+   margin-top: 50px;
+   font-family: 'Montserrat', Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1{
+    font-size: 24px;
+    font-weight: 0.8;
+    
+}
+p{
+    font-size: 16px;
+
+}
+
+.card{
+    margin-top: 15px;
+    margin-bottom: 35px;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#paypal-button-container{
+    margin-top: 15px;
+}
+
+.disclaimer {
+    font-size: 12px;
+    margin-top: 10px;
+    opacity: 0.7;
+}
+
+a{
+    color: black;
+    font-weight: 0.8;
+}
+
+#productName {
+    font-weight: 1000;
+}
+#discountLine{
+    background-color: rgba(255,228,232);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: rgba(246,79,100);
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.btn {
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: #21518d;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  vertical-align: middle; 
+}
+
+</style>
+
+<div class="container">
+    <div style="display: none;text-align: center;" id="successContent" >
+        <div style="margin-top: 20%;">
+            <h1 style="font-size: 36px;margin-bottom: 25px;">Payment success</h1>
+            <p>We have sent a receipt to your email</p>
+        
+            <a href="https://www.lastlayer.live/onboarding"><button type="button" class="btn btn-primary" >Continue</button></a>
+        </div>
+        <img src="https://www.shareasale.com/sale.cfm?tracking={{Order ID}}&amount={{Order Subtotal}}&merchantID=135259&transtype=sale" width="1" height="1">
+<script src="https://www.dwin1.com/41234.js" type="text/javascript" defer="defer"></script>
+    </div>
+
+
+    <div id="checkoutContent" class="row">
+        <div class="col-lg-4 order-lg-2">
+            <h1>Order summary</h1>
+            <div class="card" style="margin-bottom: 10px;">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-8">
+                            <p><b id="productName" style="font-weight: bold;">Product</b></p>
+                            <p id="planLine" >Plan</p>
+                            <p style="padding-top: 5px;"><span id="discountLine">Save x%</span></p>
+                        </div>
+                        <div class="col-4" style="text-align:right;">
+                            <p style="color: transparent;">.</p>
+                            <p id="planAmount" style="color: rgba(246,79,100);font-size:18px;font-weight:bold;">$x</p>
+                            <p id="amountBeforeDiscount" style="text-decoration: line-through;">$x</p>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div class="row">
+                        <div class="col-8">
+                            <p style="font-size:18px;font-weight: bold;"><b>Total</b></p>
+                        </div>
+                        <div class="col-4" style="text-align:right;">
+                            <p id="totalAmount" style="font-size:20px;font-weight: bold;">$46.37</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-8 order-lg-1">
+            <div >
+                <h1>Create an account</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <div class="">
+                            <label style="font-size: 12px;font-weight:0.8">Your email address</label>
+                            <input id="emailBox" style="font-size: 18px;" type="email" class="form-control" placeholder="Enter email">
+                            <p style="margin-top: 20px;" class="disclaimer text-muted">We do not share your information and will contact you only as needed to provide our service.</p>
+                            <p class="disclaimer text-muted">By submitting your information and continuing to purchase, you agree to our <a target="blank" href="https://www.ftxstatus.live/terms-of-service">Terms of Service</a> and <a target="blank" href="https://www.ftxstatus.live/privacy-policy">Privacy Policy</a>.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h1>Select a payment method</h1>
+                <div id="paypal-button-container"></div>
+            </div>
+        </div>
+    </div>      
+</div>
+
+
+<script>
+
+    var amountToPay=62.28;
+
+    var productName="Lastlayer";
+    var planLine="1-year plan ($5.19/mo)";
+    var discountLine="";
+    var totalAmount="62.28";
+    var amountBeforeDiscount="";
+
+
+
+    document.getElementById("productName").innerHTML = productName;
+    document.getElementById("planLine").innerHTML = planLine;
+    document.getElementById("discountLine").innerHTML = discountLine;
+    document.getElementById("totalAmount").innerHTML = totalAmount;
+    document.getElementById("planAmount").innerHTML = totalAmount;
+    document.getElementById("amountBeforeDiscount").innerHTML = amountBeforeDiscount;
+
+    if(discountLine==""){
+        document.getElementById("discountLine").style.display = "none";
+        document.getElementById("amountBeforeDiscount").style.display = "none";
+    }
+
+</script>
+
+
+<script>
+    function initPayPalButton() {
+      paypal.Buttons({
+        style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'paypal',
+          
+        },
+
+        createOrder: function(data, actions) {
+            return actions.order.create({
+                purchase_units: [{"amount":{"currency_code":"USD","value": amountToPay}}],
+                application_context: {shipping_preference: "NO_SHIPPING"}
+            });
+        },
+
+        onApprove: function(data, actions) {
+          return actions.order.capture().then(function(orderData) {
+            
+            //console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+
+
+
+            var data = {
+                email : document.getElementById("emailBox").value ,
+                data : orderData
+            };
+
+            var url = "https://script.google.com/macros/s/AKfycbz5H7uZxPztIz215YuNRUSOI2F0F7wyzFExVkjhO5fPtu4RzjODiUyNl7urfGk1PUhX/exec?data=" + JSON.stringify(data, null, 2);
+
+
+            document.getElementById('successContent').style.display = "block";
+            document.getElementById('checkoutContent').style.display = "none";
+
+            const Http = new XMLHttpRequest();
+            Http.open("GET", url);
+            Http.send();
+
+            Http.onreadystatechange = function() {
+                if(this.readyState==4){    
+                }
+            }
+
+          });
+        },
+
+        onError: function(err) {
+          console.log(err);
+        }
+      }).render('#paypal-button-container');
+    }
+    initPayPalButton();
+
+  </script>
+
